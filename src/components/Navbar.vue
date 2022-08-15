@@ -1,30 +1,14 @@
 
-<script>
-export default {
-  name: "Navbar",
-  props: {},
-  data() {
-    return {
-      title: "Wiki Countries",
-    };
-  },
-  computed: {},
-  methods: {},
-};
-</script>
-
 <template>
-  <div>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
-      <div class="container-fluid">
-        <router-link class="navbar-brand" to="/list"
-          >Wiki Countries
-        </router-link>
-      </div>
-    </nav>
-  </div>
+  <nav class="navbar navbar-dark bg-primary mb-3">
+    <div class="container">
+      <a class="navbar-brand" href="/">WikiCountries</a>
+    </div>
+  </nav>
 </template>
 
+<script>
+export default {};
+</script>
 
-<style >
-</style>
+<style></style>
