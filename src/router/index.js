@@ -2,16 +2,15 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
-
   {
     path: '/',
     name: 'list',
     component: () => import('../components/CountriesList.vue'),
     children: [
       {
-        path: '/details',
-        name: 'details',
-        component: () => import('../components/CountryDetails.vue')
+        path: '/list/:alpha3Code',
+        name: 'list',
+        component: () => import( '../components/CountryDetails.vue')
       },
     ]
   }
@@ -25,4 +24,4 @@ const router = createRouter({
   }
 });
 
-export default router;
+export default router

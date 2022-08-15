@@ -1,14 +1,18 @@
-
 <template>
   <nav class="navbar navbar-dark bg-primary mb-3">
     <div class="container">
-      <a class="navbar-brand" href="/">WikiCountries</a>
+
+      <router-link class="navbar-brand" to="/"
+        >WikiCountries</router-link
+      >
     </div>
   </nav>
 </template>
 
 <script>
-export default {};
+export default {
+  name: "NavBar",
+};
 </script>
 
 <style></style>
