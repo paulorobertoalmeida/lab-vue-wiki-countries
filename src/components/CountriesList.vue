@@ -1,22 +1,23 @@
 <template>
-<div>
-    <h1>hello</h1>
-</div>
-  
+ <h1>Hello</h1>
 </template>
 
 <script>
 export default {
-name: 'CountriesList'
+  name: 'CountriesList',
 
-data() {
+  components: {},
+  data() {
     return {
+      countries: [],
+    };
+  },
+methods: {
 
-    }
 }
-}
+  
+};
 </script>
 
 <style>
-
 </style>

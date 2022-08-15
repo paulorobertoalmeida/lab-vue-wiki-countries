@@ -5,7 +5,15 @@
 
 <script>
 export default {
-    name: 'CountryDetails'
+    name: 'CountryDetails',
+    data(){
+        return {
+            
+        }
+    },
+    mounted: {
+
+    }
 
 }
 </script>
