@@ -1,8 +1,25 @@
 <template>
-  <h1>Country List</h1>
-  <h1 v-for="(country, index) in countries" :key="index"> 
-    {{country.name.common}}
-    </h1>
+  <div>
+    <div class="container">
+      <div class="row">
+        <div class="col-5 ">
+          <div class="list-group d-flex align-items-center ">
+            <router-link
+              class="list-group-item list-group-item-action justify-content-center "
+              v-for="country in countries"
+              :to="`/country/${country.alpha3Code}`"
+            >
+              <img
+                :src="`https://flagpedia.net/data/flags/icon/72x54/
+${country.alpha2Code.toLowerCase()}.png`"
+              />
+              <p>{{ country.name.common }}</p>
+            </router-link>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
