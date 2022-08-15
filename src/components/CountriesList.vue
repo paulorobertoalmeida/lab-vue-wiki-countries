@@ -1,21 +1,20 @@
 <template>
- <h1>Hello</h1>
+  <h1>Country List</h1>
+
 </template>
 
 <script>
 export default {
-  name: 'CountriesList',
+  name: "CountriesList",
 
   components: {},
   data() {
     return {
-      countries: [],
+      countries: null,
+     
     };
   },
-methods: {
-
-}
-  
+  methods() {},
 };
 </script>
 
