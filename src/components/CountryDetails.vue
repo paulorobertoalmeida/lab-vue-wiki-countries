@@ -1,21 +1,7 @@
-<template>
-  <h1>hello</h1>
-</template>
+<template></template>
 
 <script>
-export default {
-  name: "CountryDetails",
-
-  data() {
-    return {
-      
-    };
-  },
-  mounted: {
-
-  },
-};
+export default {};
 </script>
 
-<style>
-</style>
+<style></style>

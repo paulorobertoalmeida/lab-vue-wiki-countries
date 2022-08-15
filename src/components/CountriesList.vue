@@ -1,18 +1,16 @@
 <template>
-  <div v-for="(country, index) in countries" :key="index">
-{{ country.name.common }}
-
-  </div>
+  <h1>Country List</h1>
+  <h1 v-for="(country, index) in countries" :key="index"> 
+    {{country.name.common}}
+    </h1>
 </template>
 
 <script>
 export default {
   name: "CountriesList",
-
-  components: {},
   data() {
     return {
-      //defining an array to fetch api data
+      //definimos un valor de datos estilo array para recibir la info del api
       countries: null,
     };
   },
@@ -20,18 +18,18 @@ export default {
     async fetchCountries() {
       const response = await fetch(
         "https://ih-countries-api.herokuapp.com/countries"
-      )
+      );
       const finalResponse = await response.json();
-      console.log(finalResponse)
-      this.countries = finalResponse
+      // console.log(finalResponse);//VERIFICAMOS MEDIANTES UNA LLAMADA A CONSOLA QUE RECIBIMOS LOS DATOS
+      this.countries = finalResponse;
     },
   },
-  // Using the created hook to make our first call to the db and we add the keyword async before call the hook to secure issues with api calls
-  async created() {
+  //usamos el created hook para hacer nuestra llamada inicial a nuestra base de datos.
+  //no usamos async en este caso porque la asincronia la maneja la funcion fetchCountries. El hook created() solo se encarga de llamar la funcion fetchCountries
+  created() {
     this.fetchCountries();
   },
 };
 </script>
 
-<style>
-</style>
+<style></style>
